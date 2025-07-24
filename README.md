@@ -1,6 +1,6 @@
-# 🧠 SMBp3rc
+# 🧠 Smbp3rc
 
-**SMBp3rc** es una herramienta en Bash para la enumeración y análisis automatizado de recursos compartidos SMB en una red. Permite detectar recursos accesibles, descargar archivos con extensiones sensibles y buscar posibles datos confidenciales como contraseñas, tokens y claves API.
+**Smbp3rc** es una herramienta en Bash para la enumeración y análisis automatizado de recursos compartidos SMB en una red. Permite detectar recursos accesibles, descargar archivos con extensiones sensibles y buscar posibles datos confidenciales como contraseñas, tokens y claves API.
 
 ---
 
@@ -24,9 +24,9 @@ sudo apt install smbclient smbmap nmap -y
 ## 📦 Instalación
 
 ```bash
-git clone https://github.com/tuusuario/smb-analyzer.git
-cd smb-analyzer
-chmod +x smb-analyzer.sh
+git clone https://github.com/RoyCampos/Smbp3rc.git
+cd Smbp3rc
+chmod +x Smbp3rc.sh
 ```
 
 Opcional: agrega al `$PATH` o crea un alias para usarlo desde cualquier parte.
@@ -36,7 +36,7 @@ Opcional: agrega al `$PATH` o crea un alias para usarlo desde cualquier parte.
 ## 🚀 Uso
 
 ```bash
-./smb-analyzer.sh -t <IP|CIDR> [opciones]
+./Smbp3rc.sh -t <IP|CIDR> [opciones]
 ```
 
 ### 📌 Opciones
@@ -59,25 +59,25 @@ Opcional: agrega al `$PATH` o crea un alias para usarlo desde cualquier parte.
 ### Escaneo anónimo
 
 ```bash
-./smb-analyzer.sh -t 192.168.1.0/24
+./Smbp3rc.sh -t 192.168.1.0/24
 ```
 
 ### Escaneo autenticado
 
 ```bash
-./smb-analyzer.sh -t 10.0.0.55 -u administrador -p 'P@ssw0rd!'
+./Smbp3rc.sh -t 10.0.0.55 -u administrador -p 'P@ssw0rd!'
 ```
 
 ### Escaneo con lista de IPs (máximo 100)
 
 ```bash
-./smb-analyzer.sh -tl ips.txt --limit 100 -u user -p pass
+./Smbp3rc.sh -tl ips.txt --limit 100 -u user -p pass
 ```
 
 ### Forzar un nuevo escaneo con salida a archivo
 
 ```bash
-./smb-analyzer.sh -t 192.168.100.5 --force-rescan -o resultado_host5.log
+./Smbp3rc.sh -t 192.168.100.5 --force-rescan -o resultado_host5.log
 ```
 
 ---
